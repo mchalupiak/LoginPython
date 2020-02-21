@@ -1,6 +1,7 @@
 print("Welcome to MiOS")
 yesValues = ["y", "yes", "true", "t"]
 on = True
+loggedIn = False
 def yn(val):
     return val.lower() in yesValues
 while on:
@@ -21,6 +22,7 @@ while on:
             passIndex = userInfoList.index(user) + 1
             if password == userInfoList[passIndex]:
                 print("Logged In!")
+                loggedIn = True
                 break
             else:
                 print("Incorrect password")
