@@ -27,7 +27,6 @@ while on:
             else:
                 print("Incorrect password")
                 continue
-            break
         break
     elif not yn(account):
         create = input("Would you like to create an account? ")
@@ -40,12 +39,10 @@ while on:
                 if createdUserName in userInfoList:
                     print("Username is already taken")
                     continue
-                userpassFile.close
                 userpassFile = open("usersInfo", "a+")
                 userpassFile.write("\n" + createdUserName)
                 createdPassword = input("What will your password be? ")
                 userpassFile.write("\n" + createdPassword)
-                userpassFile.close
                 break
         elif not yn(create):
             continue
